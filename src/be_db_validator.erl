@@ -27,7 +27,7 @@ prepare_conn(Conn) ->
             Conn,
             ?S_VALIDATOR_INSERT,
             [
-                "insert into validators (block, address, owner, stake, status, nonce, last_heartbeat, version_heartbeat, penalty, penalties) select ",
+                "insert into validators (block, address, name, owner, stake, status, nonce, last_heartbeat, version_heartbeat, penalty, penalties) select ",
                 "$1 as block, ",
                 "$2 as address, ",
                 "$3 as name, ",
